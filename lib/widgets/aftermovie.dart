@@ -156,7 +156,47 @@ class _Afterstate extends State<Aftermovie> {
             );
           }),
         ),
+      const SizedBox(height: 20),
+
+Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+  child: GridView.count(
+    crossAxisCount: 2,
+    shrinkWrap: true,
+    physics: const NeverScrollableScrollPhysics(),
+    crossAxisSpacing: 16,
+    mainAxisSpacing: 16,
+    children: [
+      _buildNavButton(context, "Sponsors", '/sponsors'),
+      _buildNavButton(context, "Website", '/website'),
+      _buildNavButton(context, "Core Team", '/coreTeam'),
+      _buildNavButton(context, "Queries", '/queries'),
+    ],
+  ),
+),
+
       ],
     );
   }
 }
+Widget _buildNavButton(BuildContext context, String title, String route) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, route);
+    },
+    child: Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.black26),
+      ),
+      child: Center(
+        child: Text(
+          title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+      ),
+    ),
+  );
+}
+

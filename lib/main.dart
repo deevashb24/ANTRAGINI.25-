@@ -9,6 +9,10 @@ import 'widgets/EventsPage.dart';
 import 'widgets/MediaPage.dart';
 import 'widgets/antaragni_journey_page.dart';
 import 'widgets/aftermovie.dart';
+import 'widgets/CoreTeamPage.dart';
+import 'widgets/Queries.dart';
+import 'widgets/SponsorsPage.dart';
+import 'widgets/WebsitePage.dart';
 
 void main() => runApp(const MyApp());
 
@@ -31,7 +35,14 @@ class MyApp extends StatelessWidget {
         '/events': (context) => const Eventspage(),
         '/media': (context) => const Mediapage(),
         '/brochure': (context) => const Brochure(),
+        '/sponsors': (context) =>  Sponsorspage(),
+        '/website': (context) =>  Websitepage(),
+        '/coreTeam': (context) => Coreteampage(),
+        '/queries': (context) => Queries(),
+
+
       },
+      
     );
   }
 }
