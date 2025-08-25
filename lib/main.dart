@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'widgets/bottom_nav.dart';
 import 'widgets/top_bar.dart';
 import 'widgets/steps_calories.dart';
@@ -14,7 +15,9 @@ import 'widgets/Queries.dart';
 import 'widgets/SponsorsPage.dart';
 import 'widgets/WebsitePage.dart';
 
-void main() => runApp(const MyApp());
+void main()  { 
+ 
+  runApp((const MyApp()));}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,11 +36,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/antaragniJourney': (context) => const AntaragniJourneyPage(),
         '/events': (context) => const Eventspage(),
-        '/media': (context) => const Mediapage(),
+        '/media': (context) => const MediaPage(),
         '/brochure': (context) => const Brochure(),
-        '/sponsors': (context) =>  Sponsorspage(),
+        '/sponsors': (context) =>  SponsorsPage(),
         '/website': (context) =>  Websitepage(),
-        '/coreTeam': (context) => Coreteampage(),
+        '/coreTeam': (context) => ContactsPage(),
         '/queries': (context) => Queries(),
 
 
@@ -97,7 +100,6 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const [
               TopBar(),
-              SizedBox(height: 20),
               StepsAndCalories(),
               SizedBox(height: 20),
               Discover(),

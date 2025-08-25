@@ -25,7 +25,7 @@ class PhotoGalleryPage extends StatelessWidget {
       body: GridView.builder(
         padding: const EdgeInsets.all(12),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount: 1,
           crossAxisSpacing: 12,
           mainAxisSpacing: 12,
         ),
@@ -72,15 +72,57 @@ class _GalleryState extends State<Gallery> {
     switch (index) {
       case 0:
         return [
-          'https://example.com/gallery1_img1.jpg',
-          'https://example.com/gallery1_img2.jpg',
-          'https://example.com/gallery1_img3.jpg',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0079%20(1).png?alt=media&token=fe94f06c-31ae-4caf-b71a-b057b277858a',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2FIMG_1085%20(1).png?alt=media&token=cd234aaa-a090-4b2f-bbe3-14c162ea50d6',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0082%20(1).png?alt=media&token=89e99d50-355a-4446-8a4e-536cc66dfdad',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0527%20(2).png?alt=media&token=4a637c56-a6cb-4eee-b90f-da22f3d13195',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0510-2.png?alt=media&token=7700ecb8-1350-4799-a590-446b3e93ae7f',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0508-2.png?alt=media&token=44604b7a-3184-4ea6-81dc-31ff14731166',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0475-2.png?alt=media&token=d1bae083-bc03-40a5-8518-a090d8a90074',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0471-2.png?alt=media&token=298d6605-b912-4215-935f-3e5d6f315ed6',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0458-2.png?alt=media&token=1f4cedf5-ff92-4195-8068-e821562ba21e',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0440%20(1).png?alt=media&token=85b32198-e28f-464f-b072-84fa2ad2ff3b',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F_MG_0298%20(1).png?alt=media&token=a3e918f5-770c-4366-ae59-830cb0faa3cc',
+          'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/gallery%2F1.3_2_11zon.png?alt=media&token=a5a983ba-df26-41d9-b104-398aea0b6a3c',
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+          '',
+          
+      
         ];
       case 1:
         return [
           'https://example.com/gallery2_img1.jpg',
           'https://example.com/gallery2_img2.jpg',
         ];
+        case 2:
+        return [
+          'https://example.com/gallery2_img1.jpg',
+          'https://example.com/gallery2_img2.jpg',
+        ];
+        case 3:
+        return [
+          'https://example.com/gallery2_img1.jpg',
+          'https://example.com/gallery2_img2.jpg',
+        ];
+        case 4:
+        return [
+          'https://example.com/gallery2_img1.jpg',
+          'https://example.com/gallery2_img2.jpg',
+        ];
+        case 5:
+        return [
+          'https://example.com/gallery2_img1.jpg',
+          'https://example.com/gallery2_img2.jpg',
+        ];
+
       default:
         return [
           'https://example.com/default_img1.jpg',

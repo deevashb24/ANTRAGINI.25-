@@ -28,8 +28,6 @@ class _Afterstate extends State<Aftermovie> {
       'url': 'https://firebasestorage.googleapis.com/v0/b/dev-antaragni.appspot.com/o/appLandingPage%2FcMoHcuD6vOQ-HD%20(1).jpg?alt=media&token=c2085bb4-140c-49da-abec-72f201fa37bc',
       'link': 'https://youtu.be/cMoHcuD6vOQ',
     },
-    
-
   ];
 
   @override
@@ -130,7 +128,6 @@ class _Afterstate extends State<Aftermovie> {
                   child: Image.network(
                     imageUrl,
                     fit: BoxFit.fitWidth,
-                    
                   ),
                 ),
               );
@@ -156,29 +153,31 @@ class _Afterstate extends State<Aftermovie> {
             );
           }),
         ),
-      const SizedBox(height: 20),
 
-Padding(
-  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-  child: GridView.count(
-    crossAxisCount: 2,
-    shrinkWrap: true,
-    physics: const NeverScrollableScrollPhysics(),
-    crossAxisSpacing: 16,
-    mainAxisSpacing: 16,
-    children: [
-      _buildNavButton(context, "Sponsors", '/sponsors'),
-      _buildNavButton(context, "Website", '/website'),
-      _buildNavButton(context, "Core Team", '/coreTeam'),
-      _buildNavButton(context, "Queries", '/queries'),
-    ],
-  ),
-),
+        const SizedBox(height: 20),
 
+        // --- Navigation Buttons ---
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: GridView.count(
+            crossAxisCount: 2,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
+            children: [
+              _buildNavButton(context, "Sponsors", '/sponsors'),
+              _buildNavButton(context, "Website", '/website'),
+              _buildNavButton(context, "Core Team", '/coreTeam'),
+              _buildNavButton(context, "Queries", '/queries'),
+            ],
+          ),
+        ),
       ],
     );
   }
 }
+
 Widget _buildNavButton(BuildContext context, String title, String route) {
   return GestureDetector(
     onTap: () {
@@ -199,4 +198,3 @@ Widget _buildNavButton(BuildContext context, String title, String route) {
     ),
   );
 }
-
