@@ -15,12 +15,21 @@ import 'widgets/Queries.dart';
 import 'widgets/SponsorsPage.dart';
 import 'widgets/WebsitePage.dart';
 
-void main()  { 
- 
-  runApp((const MyApp()));}
+void main()  {
+  
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}  
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +47,7 @@ class MyApp extends StatelessWidget {
         '/events': (context) => const Eventspage(),
         '/media': (context) => const MediaPage(),
         '/brochure': (context) => const Brochure(),
-        '/sponsors': (context) =>  SponsorsPage(),
+        //'/sponsors': (context) =>  SponsorsPage(),
         '/website': (context) =>  Websitepage(),
         '/coreTeam': (context) => ContactsPage(),
         '/queries': (context) => Queries(),
@@ -48,7 +57,7 @@ class MyApp extends StatelessWidget {
       
     );
   }
-}
+
 
 class NavigationController extends StatefulWidget {
   const NavigationController({super.key});
